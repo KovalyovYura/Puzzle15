@@ -5,7 +5,7 @@ import java.util.Random;
 public class GameBoard {
     private int[][] board;
     public static final int BOARD_SIZE = 4; // the bord's row size
-    public static final int SHUFFLE_ITARATIONS = 100; // the number of iteration in shuffle function
+    private int numOfShuffIteration; // the number of iteration in shuffle function
 
 
     public GameBoard() {
@@ -19,8 +19,9 @@ public class GameBoard {
                 count++;
             }
         }
-        shuffle(BOARD_SIZE-1, BOARD_SIZE-1);
     }
+
+    public void setNumOfShuffIteration(int numOfShuffIteration){ this.numOfShuffIteration = numOfShuffIteration; }
 
     public int[][] getBoard(){ return this.board; }
 
@@ -51,7 +52,7 @@ public class GameBoard {
      */
     public void shuffle(int i, int j ) {
         Random rand = new Random();
-        for (int k = 0; k < SHUFFLE_ITARATIONS; k++) {
+        for (int k = 0; k < numOfShuffIteration; k++) {
             int twoOpt = rand.nextInt(2);
             int threeOpt = rand.nextInt(3);
             int fourOpt = rand.nextInt(4);

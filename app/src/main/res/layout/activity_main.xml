@@ -27,7 +27,7 @@
         <ImageView
             android:id="@+id/imgPuzzle15ID"
             android:layout_width="wrap_content"
-            android:layout_height="418dp"
+            android:layout_height="378dp"
             android:layout_gravity="center"
             android:paddingLeft="15dp"
             android:paddingTop="10dp"
@@ -40,31 +40,71 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Switch
-                android:id="@+id/swchMusicID"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="45dp"
-                android:layout_marginLeft="45dp"
-                android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
-                android:text="@string/music"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnNewGameID"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="center|right|center_vertical"
-                android:layout_marginLeft="110dp"
-                android:layout_marginRight="45dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/button"
-                android:gravity="center"
-                android:text="@string/play_game"
-                android:textColor="@android:color/black"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="@string/choose_level" />
+
+                <Spinner
+                    android:id="@+id/spinLevelID"
+                    style="@android:style/Widget.DeviceDefault.Light.Spinner"
+                    android:layout_width="130dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/spinner_btn"
+                    android:dropDownWidth="match_parent"
+                    android:spinnerMode="dropdown" />
+
+                <Switch
+                    android:id="@+id/swchMusicID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:switchTextAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:text="@string/music"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="40dp"
+                    tools:layout_conversion_absoluteWidth="133dp"
+                    tools:layout_editor_absoluteX="290dp"
+                    tools:layout_editor_absoluteY="468dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <Button
+                    android:id="@+id/btnNewGameID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="@string/play_game"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="40dp"
+                    tools:layout_conversion_absoluteWidth="100dp"
+                    tools:layout_editor_absoluteX="261dp"
+                    tools:layout_editor_absoluteY="508dp" />
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -9,4 +9,5 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_test">Test</string>
     <string name="play_game">Play Game</string>
+    <string name="choose_level">Choose level!</string>
 </resources>

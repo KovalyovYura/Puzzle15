@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,6 +38,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         sp = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         if(sp.getBoolean("isMusicOn", false))
             mediaPlayer.start();
+        //set number of moves in shuffle according choosed level
+        board.setNumOfShuffIteration(sp.getInt("level", 0));
+        board.shuffle(board.BOARD_SIZE-1,board.BOARD_SIZE-1);
+
 
         btnNewGame = findViewById(R.id.btnNewGameID);
         txvMove = findViewById(R.id.txvMoveID);
